@@ -219,7 +219,7 @@ button {
 }
 
 .logo-img {
-    height: 65px;
+    height: 75px;
     width: auto;
     display: block;
     transition: opacity 0.3s ease;
@@ -1257,7 +1257,7 @@ section {
 }
 
 .footer-logo-img {
-    height: 100px;
+    height: 110px;
     width: auto;
     display: block;
     margin-bottom: 10px;
