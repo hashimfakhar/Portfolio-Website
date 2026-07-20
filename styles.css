@@ -5,8 +5,8 @@
 
 /* CSS Variables - Light Mode (Default) */
 :root {
-    --logo-height: 45px;
-    --footer-logo-height: 40px;
+    --logo-height: 90px;
+    --footer-logo-height: 140px;
     --color-primary: #1a1a1a;
     --color-secondary: #2d2d2d;
     --color-accent: #c9a96e;
