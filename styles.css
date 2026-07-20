@@ -1615,6 +1615,14 @@ section {
     .section-title {
         font-size: 2rem;
     }
+   
+   .nav-container .logo-img {
+        height: 36px !important;
+    }
+
+    .footer-brand .footer-logo-img {
+        height: 42px !important;
+    }
 
     .about-stats {
         flex-direction: column;
