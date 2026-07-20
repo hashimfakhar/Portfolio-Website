@@ -5,6 +5,8 @@
 
 /* CSS Variables - Light Mode (Default) */
 :root {
+    --logo-height: 45px;
+    --footer-logo-height: 40px;
     --color-primary: #1a1a1a;
     --color-secondary: #2d2d2d;
     --color-accent: #c9a96e;
@@ -34,6 +36,8 @@
 
 /* DARK MODE VARIABLES */
 [data-theme="dark"] {
+    --logo-height: 45px;
+    --footer-logo-height: 40px;
     --color-primary: #f0ebe3;
     --color-secondary: #e5e0d8;
     --color-accent: #d4b87a;
@@ -219,7 +223,7 @@ button {
 }
 
 .logo-img {
-    height: 90px;
+    height: var(--logo-height);
     width: auto;
     display: block;
     transition: opacity 0.3s ease;
@@ -1257,7 +1261,7 @@ section {
 }
 
 .footer-logo-img {
-    height: 140px;
+    height: var(--footer-logo-height);
     width: auto;
     display: block;
     margin-bottom: 10px;
@@ -1497,12 +1501,9 @@ section {
         display: none;
     }
 
-    .nav-container .logo-img {
-        height: 36px !important;
-    }
-
-    .footer-brand .footer-logo-img {
-        height: 40px !important;
+    :root {
+        --logo-height: 40px;
+        --footer-logo-height: 36px;
     }
 }
 
@@ -1511,12 +1512,9 @@ section {
         --navbar-height: 70px;
     }
 
-    .nav-container .logo-img {
-        height: 32px !important;
-    }
-
-    .footer-brand .footer-logo-img {
-        height: 36px !important;
+    :root {
+        --logo-height: 36px;
+        --footer-logo-height: 32px;
     }
 
     section {
@@ -1616,12 +1614,9 @@ section {
         font-size: 2rem;
     }
 
-    .nav-container .logo-img {
-        height: 32px !important;
-    }
-
-    .footer-brand .footer-logo-img {
-        height: 36px !important;
+    :root {
+        --logo-height: 36px;
+        --footer-logo-height: 32px;
     }
 
     .about-stats {
