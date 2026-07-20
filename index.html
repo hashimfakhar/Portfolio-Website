@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hash | Oil & Acrylic Artist</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#home" class="logo">
+                <img class="logo-img logo-light" src="https://raw.githubusercontent.com/hashimfakhar/Portfolio-Website/refs/heads/main/images/Hash%20logo%20-%20Black%20-%20New.png" alt="Hash Studio Art Logo">
+                <img class="logo-img logo-dark" src="https://raw.githubusercontent.com/hashimfakhar/Portfolio-Website/refs/heads/main/images/Hash%20logo%20-%20White%20-%20New.png" alt="Hash Studio Art Logo">
+            </a>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                <span class="hamburger"></span>
+                <span class="hamburger"></span>
+                <span class="hamburger"></span>
+            </button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="#gallery" class="nav-link">Gallery</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#process" class="nav-link">Process</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-background">
+            <div class="hero-overlay"></div>
+        </div>
+        <div class="hero-content">
+            <p class="hero-tagline">Oil & Acrylic Paintings</p>
+            <h1 class="hero-title">
+                <span class="title-line">Where Color</span>
+                <span class="title-line">Meets Soul</span>
+            </h1>
+            <p class="hero-description">
+                Contemporary fine art exploring the interplay of light, texture, and emotion 
+                through rich oil and vibrant acrylic mediums.
+            </p>
+            <div class="hero-buttons">
+                <a href="#gallery" class="btn btn-primary">View Gallery</a>
+                <a href="#contact" class="btn btn-outline">Get in Touch</a>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <span class="scroll-text">Scroll</span>
+            <div class="scroll-line"></div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="gallery-section" id="gallery">
+        <div class="section-header">
+            <span class="section-number">01</span>
+            <h2 class="section-title">Selected Works</h2>
+            <p class="section-subtitle">A curated collection of oil and acrylic paintings</p>
+        </div>
+
+        <div class="gallery-filter">
+            <button class="filter-btn active" data-filter="all">All Works</button>
+            <button class="filter-btn" data-filter="oil">Oil Paintings</button>
+            <button class="filter-btn" data-filter="acrylic">Acrylic Paintings</button>
+            <button class="filter-btn" data-filter="abstract">Abstract</button>
+            <button class="filter-btn" data-filter="landscape">Landscape</button>
+        </div>
+
+        <div class="gallery-grid" id="galleryGrid">
+            <!-- Artwork 1 -->
+            <div class="gallery-item" data-category="oil landscape">
+                <div class="artwork-card">
+                    <div class="artwork-image">
+                        <img src="https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?w=600&h=800&fit=crop" alt="Golden Hour Fields - Oil on Canvas" loading="lazy">
+                        <div class="artwork-overlay">
+                            <button class="view-btn" onclick="openLightbox(0)">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+                                View Details
+                            </button>
+                        </div>
+                    </div>
+                    <div class="artwork-info">
+                        <h3 class="artwork-title">Golden Hour Fields</h3>
+                        <p class="artwork-medium">Oil on Canvas, 24" × 36"</p>
+                        <span class="artwork-year">2024</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Artwork 2 -->
+            <div class="gallery-item" data-category="acrylic abstract">
+                <div class="artwork-card">
+                    <div class="artwork-image">
+                        <img src="https://images.unsplash.com/photo-1541961017774-22349e4a1262?w=600&h=800&fit=crop" alt="Crimson Tide - Acrylic on Canvas" loading="lazy">
+                        <div class="artwork-overlay">
+                            <button class="view-btn" onclick="openLightbox(1)">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+                                View Details
+                            </button>
+                        </div>
+                    </div>
+                    <div class="artwork-info">
+                        <h3 class="artwork-title">Crimson Tide</h3>
+                        <p class="artwork-medium">Acrylic on Canvas, 30" × 40"</p>
+                        <span class="artwork-year">2024</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Artwork 3 -->
+            <div class="gallery-item" data-category="oil abstract">
+                <div class="artwork-card">
+                    <div class="artwork-image">
+                        <img src="https://images.unsplash.com/photo-1549887534-1541e9326642?w=600&h=800&fit=crop" alt="Midnight Bloom - Oil on Linen" loading="lazy">
+                        <div class="artwork-overlay">
+                            <button class="view-btn" onclick="openLightbox(2)">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+                                View Details
+                            </button>
+                        </div>
+                    </div>
+                    <div class="artwork-info">
+                        <h3 class="artwork-title">Midnight Bloom</h3>
+                        <p class="artwork-medium">Oil on Linen, 20" × 20"</p>
+                        <span class="artwork-year">2023</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Artwork 4 -->
+            <div class="gallery-item" data-category="acrylic landscape">
+                <div class="artwork-card">
+                    <div class="artwork-image">
+                        <img src="https://images.unsplash.com/photo-1578301978693-85fa9c0320b9?w=600&h=800&fit=crop" alt="Coastal Dreams - Acrylic on Canvas" loading="lazy">
+                        <div class="artwork-overlay">
+                            <button class="view-btn" onclick="openLightbox(3)">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+                                View Details
+                            </button>
+                        </div>
+                    </div>
+                    <div class="artwork-info">
+                        <h3 class="artwork-title">Coastal Dreams</h3>
+                        <p class="artwork-medium">Acrylic on Canvas, 36" × 48"</p>
+                        <span class="artwork-year">2024</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Artwork 5 -->
+            <div class="gallery-item" data-category="oil landscape">
+                <div class="artwork-card">
+                    <div class="artwork-image">
+                        <img src="https://images.unsplash.com/photo-1578926288207-a90a5366759d?w=600&h=800&fit=crop" alt="Autumn Whisper - Oil on Canvas" loading="lazy">
+                        <div class="artwork-overlay">
+                            <button class="view-btn" onclick="openLightbox(4)">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+                                View Details
+                            </button>
+                        </div>
+                    </div>
+                    <div class="artwork-info">
+                        <h3 class="artwork-title">Autumn Whisper</h3>
+                        <p class="artwork-medium">Oil on Canvas, 18" × 24"</p>
+                        <span class="artwork-year">2023</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Artwork 6 -->
+            <div class="gallery-item" data-category="acrylic abstract">
+                <div class="artwork-card">
+                    <div class="artwork-image">
+                        <img src="https://images.unsplash.com/photo-1549490349-8643362247b5?w=600&h=800&fit=crop" alt="Solar Flare - Acrylic on Wood Panel" loading="lazy">
+                        <div class="artwork-overlay">
+                            <button class="view-btn" onclick="openLightbox(5)">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+                                View Details
+                            </button>
+                        </div>
+                    </div>
+                    <div class="artwork-info">
+                        <h3 class="artwork-title">Solar Flare</h3>
+                        <p class="artwork-medium">Acrylic on Wood Panel, 12" × 12"</p>
+                        <span class="artwork-year">2024</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Artwork 7 -->
+            <div class="gallery-item" data-category="oil abstract">
+                <div class="artwork-card">
+                    <div class="artwork-image">
+                        <img src="https://images.unsplash.com/photo-1577720580479-7d839d829c73?w=600&h=800&fit=crop" alt="Ethereal Mist - Oil on Canvas" loading="lazy">
+                        <div class="artwork-overlay">
+                            <button class="view-btn" onclick="openLightbox(6)">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+                                View Details
+                            </button>
+                        </div>
+                    </div>
+                    <div class="artwork-info">
+                        <h3 class="artwork-title">Ethereal Mist</h3>
+                        <p class="artwork-medium">Oil on Canvas, 40" × 30"</p>
+                        <span class="artwork-year">2023</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Artwork 8 -->
+            <div class="gallery-item" data-category="acrylic landscape">
+                <div class="artwork-card">
+                    <div class="artwork-image">
+                        <img src="https://images.unsplash.com/photo-1513364776144-60967b0f800f?w=600&h=800&fit=crop" alt="Violet Horizon - Acrylic on Canvas" loading="lazy">
+                        <div class="artwork-overlay">
+                            <button class="view-btn" onclick="openLightbox(7)">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+                                View Details
+                            </button>
+                        </div>
+                    </div>
+                    <div class="artwork-info">
+                        <h3 class="artwork-title">Violet Horizon</h3>
+                        <p class="artwork-medium">Acrylic on Canvas, 24" × 24"</p>
+                        <span class="artwork-year">2024</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about-section" id="about">
+        <div class="about-container">
+            <div class="about-image">
+                <div class="image-frame">
+                    <img src="https://images.unsplash.com/photo-1460661419201-fd4cecdf8a8b?w=500&h=650&fit=crop" alt="Hash in the studio" loading="lazy">
+                </div>
+                <div class="experience-badge">
+                    <span class="badge-number">15+</span>
+                    <span class="badge-text">Years of<br>Experience</span>
+                </div>
+            </div>
+            <div class="about-content">
+                <span class="section-number">02</span>
+                <h2 class="section-title">About the Artist</h2>
+                <p class="about-text">
+                    Hash is a contemporary fine artist based in Portland, Oregon, specializing in 
+                    oil and acrylic paintings that explore the emotional resonance of color and texture. 
+                    Her work bridges the gap between abstract expressionism and impressionistic landscapes, 
+                    creating pieces that invite viewers to find their own meaning within the layers of paint.
+                </p>
+                <p class="about-text">
+                    With over 15 years of dedicated practice, Hash has developed a distinctive style 
+                    characterized by bold brushwork, rich color palettes, and an intuitive approach 
+                    to composition. Her paintings have been exhibited in galleries across the Pacific 
+                    Northwest and are held in private collections worldwide.
+                </p>
+                <div class="about-stats">
+                    <div class="stat-item">
+                        <span class="stat-number">200+</span>
+                        <span class="stat-label">Original Works</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">35</span>
+                        <span class="stat-label">Exhibitions</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">12</span>
+                        <span class="stat-label">Awards Won</span>
+                    </div>
+                </div>
+                <a href="#contact" class="btn btn-primary">Work With Me</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="process-section" id="process">
+        <div class="section-header centered">
+            <span class="section-number">03</span>
+            <h2 class="section-title">The Creative Process</h2>
+            <p class="section-subtitle">From blank canvas to finished masterpiece</p>
+        </div>
+
+        <div class="process-timeline">
+            <div class="process-step">
+                <div class="step-number">01</div>
+                <div class="step-content">
+                    <h3>Inspiration & Sketching</h3>
+                    <p>Every painting begins with observation — a fleeting moment of light, an emotional response to nature, or a color combination that demands exploration. Initial sketches capture the essence before paint ever touches canvas.</p>
+                </div>
+                <div class="step-image">
+                    <img src="https://images.unsplash.com/photo-1513364776144-60967b0f800f?w=400&h=300&fit=crop" alt="Sketching process" loading="lazy">
+                </div>
+            </div>
+
+            <div class="process-step">
+                <div class="step-number">02</div>
+                <div class="step-content">
+                    <h3>Underpainting & Layering</h3>
+                    <p>The foundation is laid with thin washes of color, establishing value and temperature. For oils, this might be a traditional imprimatura; for acrylics, a bold colored ground that peeks through subsequent layers.</p>
+                </div>
+                <div class="step-image">
+                    <img src="https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?w=400&h=300&fit=crop" alt="Layering paint" loading="lazy">
+                </div>
+            </div>
+
+            <div class="process-step">
+                <div class="step-number">03</div>
+                <div class="step-content">
+                    <h3>Building Texture</h3>
+                    <p>Using palette knives, brushes, and unconventional tools, texture is built up to create depth and visual interest. Each layer is allowed to dry (or partially dry) before the next is applied, creating complex interactions of color.</p>
+                </div>
+                <div class="step-image">
+                    <img src="https://images.unsplash.com/photo-1541961017774-22349e4a1262?w=400&h=300&fit=crop" alt="Texture building" loading="lazy">
+                </div>
+            </div>
+
+            <div class="process-step">
+                <div class="step-number">04</div>
+                <div class="step-content">
+                    <h3>Refinement & Varnishing</h3>
+                    <p>The final stage involves careful refinement of focal points, adjustment of values, and the application of a protective varnish. For oil paintings, this comes after months of curing; acrylics can be varnished within days.</p>
+                </div>
+                <div class="step-image">
+                    <img src="https://images.unsplash.com/photo-1549887534-1541e9326642?w=400&h=300&fit=crop" alt="Finished painting" loading="lazy">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials-section">
+        <div class="section-header centered">
+            <span class="section-number">04</span>
+            <h2 class="section-title">Collector Words</h2>
+        </div>
+        <div class="testimonials-slider" id="testimonialSlider">
+            <div class="testimonial-track">
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">★★★★★</div>
+                    <p class="testimonial-text">"Hash's 'Golden Hour Fields' transformed our living room. The way she captures light is nothing short of magical. Every guest asks about it."</p>
+                    <div class="testimonial-author">
+                        <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=60&h=60&fit=crop" alt="Sarah Mitchell" class="author-avatar">
+                        <div class="author-info">
+                            <span class="author-name">Sarah Mitchell</span>
+                            <span class="author-title">Private Collector, Seattle</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">★★★★★</div>
+                    <p class="testimonial-text">"We commissioned a large acrylic piece for our office lobby. Hash understood our vision perfectly and delivered a stunning work that energizes the entire space."</p>
+                    <div class="testimonial-author">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=60&h=60&fit=crop" alt="James Chen" class="author-avatar">
+                        <div class="author-info">
+                            <span class="author-name">James Chen</span>
+                            <span class="author-title">CEO, Meridian Design</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">★★★★★</div>
+                    <p class="testimonial-text">"The texture in her oil paintings has to be seen in person to be believed. 'Midnight Bloom' has become the centerpiece of our art collection."</p>
+                    <div class="testimonial-author">
+                        <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=60&h=60&fit=crop" alt="Margaret O'Brien" class="author-avatar">
+                        <div class="author-info">
+                            <span class="author-name">Margaret O'Brien</span>
+                            <span class="author-title">Art Curator, Portland</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-dots">
+                <button class="dot active" data-slide="0"></button>
+                <button class="dot" data-slide="1"></button>
+                <button class="dot" data-slide="2"></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section" id="contact">
+        <div class="contact-container">
+            <div class="contact-info">
+                <span class="section-number">05</span>
+                <h2 class="section-title">Let's Create Together</h2>
+                <p class="contact-description">
+                    Interested in purchasing an original, commissioning a custom piece, or 
+                    collaborating on an exhibition? I'd love to hear from you.
+                </p>
+
+                <div class="contact-details">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                        </div>
+                        <div class="contact-text">
+                            <span class="contact-label">Email</span>
+                            <a href="mailto:hello@hashstudioart.art">hello@hashstudioart.art</a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                        </div>
+                        <div class="contact-text">
+                            <span class="contact-label">Studio</span>
+                            <span>Portland, Oregon</span>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+                        </div>
+                        <div class="contact-text">
+                            <span class="contact-label">Instagram</span>
+                            <a href="https://instagram.com/hashstudioart.art" target="_blank">@hashstudioart.art</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <form class="contact-form" id="contactForm">
+                <div class="form-group">
+                    <label for="name">Your Name</label>
+                    <input type="text" id="name" name="name" required placeholder="John Doe">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" required placeholder="john@example.com">
+                </div>
+                <div class="form-group">
+                    <label for="subject">Subject</label>
+                    <select id="subject" name="subject" required>
+                        <option value="" disabled selected>Select an option</option>
+                        <option value="purchase">Purchase Original</option>
+                        <option value="commission">Commission Work</option>
+                        <option value="exhibition">Exhibition Inquiry</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="message">Your Message</label>
+                    <textarea id="message" name="message" rows="5" required placeholder="Tell me about your project or inquiry..."></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary btn-full">
+                    <span class="btn-text">Send Message</span>
+                    <span class="btn-loader"></span>
+                </button>
+                <div class="form-success" id="formSuccess">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                    Thank you! Your message has been sent successfully.
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <img class="footer-logo-img footer-logo-light" src="https://raw.githubusercontent.com/hashimfakhar/Portfolio-Website/refs/heads/main/images/Hash%20logo%20-%20Black%20-%20New.png" alt="Hash Studio Art Logo">
+                <img class="footer-logo-img footer-logo-dark" src="https://raw.githubusercontent.com/hashimfakhar/Portfolio-Website/refs/heads/main/images/Hash%20logo%20-%20White%20-%20New.png" alt="Hash Studio Art Logo">
+                <p class="footer-tagline">Fine Art — Oil & Acrylic Paintings</p>
+            </div>
+            <div class="footer-links">
+                <a href="#home">Home</a>
+                <a href="#gallery">Gallery</a>
+                <a href="#about">About</a>
+                <a href="#process">Process</a>
+                <a href="#contact">Contact</a>
+            </div>
+            <div class="footer-social">
+                <a href="#" aria-label="Instagram">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+                </a>
+                <a href="#" aria-label="Pinterest">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M8 12c0-2.21 1.79-4 4-4s4 1.79 4 4-1.79 4-4 4"/><path d="M12 16l-2 6"/></svg>
+                </a>
+                <a href="#" aria-label="Email">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                </a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p> Hash. All rights reserved.</p>
+            <p class="footer-credit">Website crafted with care</p>
+        </div>
+    </footer>
+
+    <!-- Lightbox Modal -->
+    <div class="lightbox" id="lightbox">
+        <button class="lightbox-close" onclick="closeLightbox()" aria-label="Close">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+        </button>
+        <button class="lightbox-nav lightbox-prev" onclick="changeLightbox(-1)" aria-label="Previous">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg>
+        </button>
+        <button class="lightbox-nav lightbox-next" onclick="changeLightbox(1)" aria-label="Next">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+        </button>
+        <div class="lightbox-content">
+            <img src="" alt="" id="lightboxImage">
+            <div class="lightbox-info">
+                <h3 id="lightboxTitle"></h3>
+                <p id="lightboxMedium"></p>
+            </div>
+        </div>
+    </div>
+
+        <!-- Dark Mode Toggle -->
+    <button class="dark-mode-toggle" id="darkModeToggle" aria-label="Toggle dark mode">
+        <svg class="moon-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+        </svg>
+        <svg class="sun-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+        </svg>
+    </button>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
