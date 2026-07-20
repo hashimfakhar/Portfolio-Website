@@ -1257,7 +1257,7 @@ section {
 }
 
 .footer-logo-img {
-    height: 120px;
+    height: 140px;
     width: auto;
     display: block;
     margin-bottom: 10px;
@@ -1498,11 +1498,11 @@ section {
     }
 
     .nav-container .logo-img {
-        height: 40px !important;
+        height: 36px !important;
     }
 
     .footer-brand .footer-logo-img {
-        height: 36px !important;
+        height: 40px !important;
     }
 }
 
@@ -1512,11 +1512,11 @@ section {
     }
 
     .nav-container .logo-img {
-        height: 36px !important;
+        height: 32px !important;
     }
 
     .footer-brand .footer-logo-img {
-        height: 32px !important;
+        height: 36px !important;
     }
 
     section {
@@ -1617,11 +1617,11 @@ section {
     }
 
     .nav-container .logo-img {
-        height: 36px !important;
+        height: 32px !important;
     }
 
     .footer-brand .footer-logo-img {
-        height: 32px !important;
+        height: 36px !important;
     }
 
     .about-stats {
