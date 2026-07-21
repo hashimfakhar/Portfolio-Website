@@ -1502,8 +1502,8 @@ section {
     }
 
     :root {
-        --logo-height: 40px;
-        --footer-logo-height: 36px;
+        --logo-height: 50px;
+        --footer-logo-height: 56px;
     }
 }
 
@@ -1513,8 +1513,8 @@ section {
     }
 
     :root {
-        --logo-height: 36px;
-        --footer-logo-height: 32px;
+        --logo-height: 46px;
+        --footer-logo-height: 52px;
     }
 
     section {
@@ -1615,8 +1615,8 @@ section {
     }
 
     :root {
-        --logo-height: 36px;
-        --footer-logo-height: 32px;
+        --logo-height: 42px;
+        --footer-logo-height: 46px;
     }
 
     .about-stats {
