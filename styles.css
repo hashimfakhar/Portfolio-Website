@@ -6,7 +6,7 @@
 /* CSS Variables - Light Mode (Default) */
 :root {
     --logo-height: 90px;
-    --footer-logo-height: 140px;
+    --footer-logo-height: 180px;
     --color-primary: #1a1a1a;
     --color-secondary: #2d2d2d;
     --color-accent: #c9a96e;
@@ -37,7 +37,7 @@
 /* DARK MODE VARIABLES */
 [data-theme="dark"] {
     --logo-height: 90px;
-    --footer-logo-height: 140px;
+    --footer-logo-height: 180px;
     --color-primary: #f0ebe3;
     --color-secondary: #e5e0d8;
     --color-accent: #d4b87a;
