@@ -36,8 +36,8 @@
 
 /* DARK MODE VARIABLES */
 [data-theme="dark"] {
-    --logo-height: 45px;
-    --footer-logo-height: 40px;
+    --logo-height: 90px;
+    --footer-logo-height: 140px;
     --color-primary: #f0ebe3;
     --color-secondary: #e5e0d8;
     --color-accent: #d4b87a;
